@@ -8,8 +8,8 @@ echo mysql_error();
 $NewData = mysql_connect('localhost', 'DBUSER', 'DBPASS');
 echo mysql_error();
 
-mysql_select_db('roomallo_radb', $oldData);
-mysql_select_db('openhote_radb', $NewData);
+mysql_select_db('OLDDB', $oldData);
+mysql_select_db('NEWDB', $NewData);
 
 $getAllTablesName    = "SELECT table_name FROM information_schema.tables WHERE table_type = 'base table'";
 $getAllTablesNameExe = mysql_query($getAllTablesName);
